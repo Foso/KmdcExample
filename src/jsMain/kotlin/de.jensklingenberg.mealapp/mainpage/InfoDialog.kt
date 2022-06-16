@@ -22,8 +22,14 @@ fun InfoDialog(openJoinDialog: Boolean, onCloseButtonClicked: () -> Unit) {
         this.Content {
 
             Div {
+                A(href = "https://github.com/Foso/KmdcExample") {
+                    Text("Source code at https://github.com/Foso/KmdcExample")
+                }
+            }
+
+            Div {
                 A(href = "https://github.com/mpetuska/kmdc") {
-                    Text("Created with https://github.com/mpetuska/kmdc")
+                    Text("Created with Compose for Web and  https://github.com/mpetuska/kmdc")
                 }
             }
 
