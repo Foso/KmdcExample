@@ -1,5 +1,5 @@
 # KmdcExample
-Example project with Compose for Web and [Kmdc](https://github.com/mpetuska/kmdc)
+Example project with Compose for Web and [Kmdc](https://github.com/mpetuska/kmdc) https://foso.github.io/KmdcExample/
 
 
 | MainPage | Detail1                                                                                                 |  
