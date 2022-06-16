@@ -86,9 +86,8 @@ class MainPageViewModel(private val mealDataSource: MealDataSource) {
             if (meals.isEmpty()) {
                 mealsState.value = MainpageUiState.Error
             } else {
-                val results = meals
-                searchResults = results
-                mealsState.value = MainpageUiState.Success((results))
+                searchResults = meals
+                mealsState.value = MainpageUiState.Success((meals))
             }
         }
     }

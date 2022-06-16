@@ -19,7 +19,9 @@ data class Filter(val name: String, val checked: Boolean)
 fun Filter(countries: List<Filter>, onFilterSelected: (Int) -> Unit) {
 
     var openMenu: Boolean by remember { mutableStateOf(false) }
-
+    IconButton(MDCIcon.FilterList) {
+        openMenu = !openMenu
+    }
     MDCMenuSurfaceAnchor(attrs = {
         style {
             width(10.percent)
@@ -27,10 +29,6 @@ fun Filter(countries: List<Filter>, onFilterSelected: (Int) -> Unit) {
             alignItems(AlignItems.Start)
         }
     }) {
-
-        IconButton(MDCIcon.FilterList) {
-            openMenu = !openMenu
-        }
 
         MDCMenuSurface(
             open = openMenu,
