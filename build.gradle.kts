@@ -2,14 +2,14 @@
 plugins {
     kotlin("multiplatform")
     id("org.jetbrains.compose")
-    id("com.google.devtools.ksp") version "1.6.21-1.0.5"
+    id("com.google.devtools.ksp") version "1.7.0-1.0.6"
     id("kotlinx-serialization")
 }
 
 group "com.example"
 version "1.0-SNAPSHOT"
 val ktorVersion = "2.0.1"
-val ktorfitVersion = "1.0.0-beta06"
+val ktorfitVersion = "1.0.0-beta08"
 repositories {
     google()
     mavenCentral()
@@ -46,8 +46,8 @@ kotlin {
             dependencies {
                 implementation(compose.web.core)
                 implementation(compose.runtime)
-                implementation("dev.petuska:kmdc:0.0.4")
-                implementation("dev.petuska:kmdcx:0.0.4")
+                implementation("dev.petuska:kmdc:0.0.5")
+                implementation("dev.petuska:kmdcx:0.0.5")
                 implementation(npm("material-icons","^1.10.4"))
                 // SCSS dependencies
                 implementation(devNpm("style-loader", "^3.3.1"))
@@ -62,6 +62,12 @@ kotlin {
             }
         }
     }
+}
+
+
+rootProject.extensions.configure<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension> {
+    versions.webpackDevServer.version = "4.3.1"
+    versions.webpackCli.version = "4.10.0"
 }
 
 dependencies {
