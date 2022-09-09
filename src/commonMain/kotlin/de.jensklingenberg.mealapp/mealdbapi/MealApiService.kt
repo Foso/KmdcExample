@@ -23,7 +23,7 @@ interface MealApiService {
     suspend fun getCategories(): CategoryResult
 
     @GET("search.php?s={mealName}")
-    suspend fun getMealsByName(@Path("mealName") mealName: String): MealResult?
+    suspend fun getMealsByName(@Path("mealName") mealName: String): MealResult
 
     @GET("lookup.php?i={mealId}")
     suspend fun getMealsById(@Path("mealId") mealName: Int): MealResult
