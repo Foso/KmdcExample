@@ -9,7 +9,7 @@ plugins {
 group "com.example"
 version "1.0-SNAPSHOT"
 val ktorVersion = "2.0.1"
-val ktorfitVersion = "1.0.0-beta12"
+val ktorfitVersion = "1.0.0-beta14"
 repositories {
     google()
     mavenCentral()

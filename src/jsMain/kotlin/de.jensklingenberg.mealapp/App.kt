@@ -26,7 +26,7 @@ class App {
             }
         }
 
-        private val api = Ktorfit(MealApiService.baseUrl, client).create<MealApiService>()
+        private val api = Ktorfit.Builder().baseUrl(MealApiService.baseUrl).httpClient(client).build().create<MealApiService>()
         val mealDataSource: MealDataSource = MealRepository(api)
 
     }
